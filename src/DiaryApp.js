@@ -8,7 +8,7 @@ function DiaryApp() {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [isLoggedIn, setIsLoggedIn] = useState(false);
-    const adminCredentials = { username: "admin", password: "password" };
+    const adminCredentials = { username: "Ranjith", password: "49713044" };
 
     // State for likes, comments, and liked post tracking
     const [likes, setLikes] = useState({});
