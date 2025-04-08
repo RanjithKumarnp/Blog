@@ -27,6 +27,21 @@ function DiaryApp() {
         setComments(storedComments);
         setLikedPosts(storedLikedPosts);
     }, []);
+    useEffect(() => {
+  fetch('http://localhost:5000/posts')
+    .then(res => res.json())
+    .then(data => setPosts(data));
+}, []);
+
+const submitPost = async () => {
+  await fetch('http://localhost:5000/posts', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ content: newPost }),
+  });
+  setNewPost('');
+};
+
 
     // Save data to localStorage
     useEffect(() => {
