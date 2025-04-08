@@ -15,6 +15,11 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+  "start": "serve -s build",
+  "build": "react-scripts build"
+}
+
+  "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -44,3 +49,4 @@
   "author": "",
   "license": "ISC"
 }
+
